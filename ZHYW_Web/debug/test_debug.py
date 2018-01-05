@@ -1,0 +1,68 @@
+__author__ = 'Administrator'
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+from selenium.webdriver.support.select import Select
+import datetime
+from custom_package import zhyw_login
+
+driver = webdriver.Ie()
+zhyw_login.Login().yw_login(driver, 13030101, 1)
+'''
+driver.get("http://192.168.0.123:7779/ioms/")
+driver.maximize_window()
+driver.find_element_by_id("userName").clear()
+driver.find_element_by_id("userName").send_keys("13030101")
+driver.find_element_by_id("passWord").clear()
+driver.find_element_by_id("passWord").send_keys("1")
+driver.find_element_by_id("login_button").click()
+driver.find_element_by_xpath(".//*[@id='A106']").click()
+above = driver.find_element_by_xpath("//div[@id='10602']")
+ActionChains(driver).move_to_element(above).perform()
+driver.find_element_by_xpath("//div[@id='10602']/ul/li[5]/a").click()
+above = driver.find_element_by_xpath("//*[@id='thrMenu']")
+ActionChains(driver).move_to_element(above).perform()
+driver.switch_to.frame("FrameRight")
+ActionChains(driver).move_to_element(above).perform()
+driver.find_element_by_id("addRole").click()
+driver.switch_to.default_content()
+driver.find_element_by_xpath("//div[@class='aui_buttons']/button[2]").click()
+above = driver.find_element_by_xpath("//div[@id='10602']")
+ActionChains(driver).move_to_element(above).perform()
+driver.find_element_by_xpath("//div[@id='10602']/ul/li[3]/a").click()
+driver.switch_to.frame("FrameRight")
+s = driver.find_elements_by_class_name("combo-arrow")
+s[0].click()
+time.sleep(2)
+drop_down1 = driver.find_element_by_xpath("//div[@id='_easyui_combobox_i3_2']")
+ActionChains(driver).click(drop_down1).click().perform()
+time.sleep(2)
+s[1].click()
+time.sleep(2)
+drop_down2 = driver.find_element_by_xpath("//div[@id='_easyui_combobox_i4_2']")
+ActionChains(driver).click(drop_down2).click().perform()
+driver.find_element_by_xpath("//div[@class='user_sub']/button").click()
+driver.switch_to.default_content()
+driver.find_element_by_xpath(".//*[@id='A103']").click()
+driver.find_element_by_xpath("//*[@id='10304']/a").click()
+t = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+today = datetime.date.today()
+yesterday = today + datetime.timedelta(days=10)
+s = today
+t = yesterday
+driver.find_element_by_xpath("//*[@id='10304']/a").click()
+driver.switch_to.frame("FrameRight")
+driver.find_element_by_xpath("//div[@id='addEvent']/span").click()
+driver.switch_to.default_content()
+iframe = driver.find_element_by_tag_name("iframe")
+driver.switch_to.frame(iframe)
+driver.find_element_by_id("title").send_keys(u"测试巡检test" + str(s))
+driver.find_element_by_id("startdate").send_keys(str(s))
+driver.find_element_by_id("enddate").send_keys(str(t))
+s = driver.find_element_by_id("select1")
+Select(s).select_by_value("100102010001")
+driver.find_element_by_id("rightMove").click()
+driver.switch_to.default_content()
+driver.find_element_by_class_name("aui_state_highlight").click()
+time.sleep(3)
+'''

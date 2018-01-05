@@ -1,0 +1,4 @@
+1513331247254	Marionette	INFO	Listening on port 6412
+1513331427655	Marionette	INFO	Listening on port 6453
+[Child 12420] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
+[Child 12420] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
